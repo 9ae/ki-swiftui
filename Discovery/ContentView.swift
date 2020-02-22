@@ -9,8 +9,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Button(action: {print("load preferences")}){
+                Text("Preferences")
+            }
+            
+        }
     }
 }
 
