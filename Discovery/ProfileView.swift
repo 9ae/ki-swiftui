@@ -61,7 +61,7 @@ struct ProfileView: View {
                     print("like")
                 }
             }.padding()
-        }
+        }.background(Color.white)
     } // end of view
 }
 

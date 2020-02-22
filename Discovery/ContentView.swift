@@ -21,10 +21,12 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             List(profiles, id: \.uuid){ pro in
-                DiscoverRow(profile: pro)
-                    .frame(width: nil, height: 230, alignment: .top)
-                .cornerRadius(16)
-                    .shadow(color: Color.gray, radius: 7, x: 1, y: 2)
+                NavigationLink(destination: ProfileView(profile: pro) ){
+                    DiscoverRow(profile: pro)
+                        .frame(width: nil, height: 230, alignment: .top)
+                    .cornerRadius(16)
+                        .shadow(color: Color.gray, radius: 7, x: 1, y: 2)
+                }
             } // end of list
         }.background(Color.white) // end of nav view
     } // END OF BODY
