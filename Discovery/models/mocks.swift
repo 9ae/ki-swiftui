@@ -12,6 +12,23 @@ func genPro(name: String, age: Int, picture: String, vouches: Int, kinksMatched:
     let pro = Profile(uuid: UUID().uuidString , name: name, age:age, picture_public_id: picture)
     pro.vouches = vouches
     pro.kinksMatched = kinksMatched
+    
+    pro.city = "New York"
+    pro.genders = ["agender","non-binary"]
+    pro.roles = ["domme", "exhibitionist", "masochist"]
+    pro.bio = "Lorem ipsum. blah bha. | He's not like the other guys. He's a NICE guy -- but wait, is he really that nice? What's behind his sweet, romantic act? In this video, we take on the Nice Guy archetype and figure out what he represents in our world today."
+    pro.kinks =
+        [ Kink(label: "pegging", code: "pegging", form: .act, exp: 3, likesGive: true, likesGet: false, likesBoth: false),
+          Kink(label: "massages", code: "massages", form: .service, exp: 2, likesGive: false, likesGet: false, likesBoth: true),
+          Kink(label: "corset", code: "corset", form: .wearable, exp: 2, likesGive: false, likesGet: true, likesBoth: false)
+        ]
+    
+    pro.prompts =
+        [BioPrompt(title: "I am really good at...", answer: "making breakfast", show: true),
+         BioPrompt(title: "I spend my days thinking about...", answer: "soccer", show: false),
+         BioPrompt(title: "My safe word is...", answer: "penguin", show: true)
+        ]
+    
     return pro
 }
 

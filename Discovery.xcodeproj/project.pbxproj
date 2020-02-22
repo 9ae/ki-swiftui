@@ -16,6 +16,11 @@
 		0014F1B324019EC900208264 /* schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1B224019EC900208264 /* schema.swift */; };
 		0014F1B524019F3200208264 /* mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1B424019F3200208264 /* mocks.swift */; };
 		0014F1B72401A0A100208264 /* DiscoverRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1B62401A0A100208264 /* DiscoverRow.swift */; };
+		0014F1B92401DB1500208264 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1B82401DB1500208264 /* ProfileView.swift */; };
+		0014F1BC2401DBEB00208264 /* KinksCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1BB2401DBEB00208264 /* KinksCountView.swift */; };
+		0014F1BE2401DCD400208264 /* VouchCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1BD2401DCD400208264 /* VouchCountView.swift */; };
+		0014F1C02401E07200208264 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1BF2401E07200208264 /* HeartButton.swift */; };
+		0014F1C22401E1AD00208264 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1C12401E1AD00208264 /* NextButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		0014F1B224019EC900208264 /* schema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schema.swift; sourceTree = "<group>"; };
 		0014F1B424019F3200208264 /* mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mocks.swift; sourceTree = "<group>"; };
 		0014F1B62401A0A100208264 /* DiscoverRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverRow.swift; sourceTree = "<group>"; };
+		0014F1B82401DB1500208264 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		0014F1BB2401DBEB00208264 /* KinksCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinksCountView.swift; sourceTree = "<group>"; };
+		0014F1BD2401DCD400208264 /* VouchCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VouchCountView.swift; sourceTree = "<group>"; };
+		0014F1BF2401E07200208264 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
+		0014F1C12401E1AD00208264 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +72,12 @@
 		0014F19A24019E5900208264 /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				0014F1BA2401DBBB00208264 /* components */,
 				0014F1B124019EB000208264 /* models */,
 				0014F19B24019E5900208264 /* AppDelegate.swift */,
 				0014F19D24019E5900208264 /* SceneDelegate.swift */,
-				0014F1B62401A0A100208264 /* DiscoverRow.swift */,
 				0014F19F24019E5900208264 /* ContentView.swift */,
+				0014F1B82401DB1500208264 /* ProfileView.swift */,
 				0014F1A124019E5A00208264 /* Assets.xcassets */,
 				0014F1A624019E5A00208264 /* LaunchScreen.storyboard */,
 				0014F1A924019E5A00208264 /* Info.plist */,
@@ -90,6 +101,18 @@
 				0014F1B424019F3200208264 /* mocks.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		0014F1BA2401DBBB00208264 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				0014F1B62401A0A100208264 /* DiscoverRow.swift */,
+				0014F1BB2401DBEB00208264 /* KinksCountView.swift */,
+				0014F1BD2401DCD400208264 /* VouchCountView.swift */,
+				0014F1BF2401E07200208264 /* HeartButton.swift */,
+				0014F1C12401E1AD00208264 /* NextButton.swift */,
+			);
+			path = components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,11 +186,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0014F1C02401E07200208264 /* HeartButton.swift in Sources */,
 				0014F1B324019EC900208264 /* schema.swift in Sources */,
 				0014F19C24019E5900208264 /* AppDelegate.swift in Sources */,
 				0014F19E24019E5900208264 /* SceneDelegate.swift in Sources */,
+				0014F1BC2401DBEB00208264 /* KinksCountView.swift in Sources */,
 				0014F1B72401A0A100208264 /* DiscoverRow.swift in Sources */,
+				0014F1C22401E1AD00208264 /* NextButton.swift in Sources */,
+				0014F1BE2401DCD400208264 /* VouchCountView.swift in Sources */,
 				0014F1A024019E5900208264 /* ContentView.swift in Sources */,
+				0014F1B92401DB1500208264 /* ProfileView.swift in Sources */,
 				0014F1B524019F3200208264 /* mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

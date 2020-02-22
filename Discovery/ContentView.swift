@@ -26,7 +26,7 @@ struct ContentView: View {
                 .cornerRadius(16)
                     .shadow(color: Color.gray, radius: 7, x: 1, y: 2)
             } // end of list
-        } // end of nav view
+        }.background(Color.white) // end of nav view
     } // END OF BODY
 } // END OF VIEW
 
