@@ -12,15 +12,21 @@ struct ContentView: View {
     
     var profiles : [Profile]
     
+    
+    init(profiles: [Profile]){
+        UITableView.appearance().separatorStyle = .none
+        self.profiles = profiles
+    }
+    
     var body: some View {
         NavigationView{
             List(profiles, id: \.uuid){ pro in
                 DiscoverRow(profile: pro)
-                    .frame(width: 375, height: 230, alignment: .top)
+                    .frame(width: nil, height: 230, alignment: .top)
                 .cornerRadius(16)
                     .shadow(color: Color.gray, radius: 7, x: 1, y: 2)
-            }
-        }
+            } // end of list
+        } // end of nav view
     } // END OF BODY
 } // END OF VIEW
 
