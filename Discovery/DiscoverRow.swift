@@ -40,24 +40,24 @@ struct DiscoverRow: View {
     }
     
     var body: some View {
+        GeometryReader { geometry in
         ZStack(alignment: .bottomTrailing) {
-            VStack(alignment: .leading) {
-                picture().resizable()
-                HStack(alignment: .top, spacing: 16) {
-                    Text(profile.name)
-                        .padding(.horizontal, 16)
-                        .font(.headline)
-                    
-                    kinksCount(profile.kinksMatched)
-                        .font(.caption)
-                    
-                    vouchCount(profile.vouches)
-                        .padding(.bottom, 8)
-                        .font(.caption)
-                }
-                .frame(width: nil, height: 64, alignment: .center)
-                .background(Color(hue: 0, saturation: 0, brightness: 1.0, opacity: 0.8))
+            self.picture().resizable()
+            HStack(alignment: .top, spacing: 16) {
+                Text(self.profile.name)
+                    .padding(.horizontal, 16)
+                    .font(.headline)
+                
+                self.kinksCount(self.profile.kinksMatched)
+                    .font(.caption)
+                
+                self.vouchCount(self.profile.vouches)
+                    .padding(.bottom, 8)
+                    .font(.caption)
             }
+            .frame(width: geometry.size.width , height: 64, alignment: .leading)
+            .fixedSize(horizontal: false, vertical: true)
+            .background(Color(hue: 0, saturation: 0, brightness: 1.0, opacity: 0.8))
             VStack(alignment: .center, spacing: 24) {
                 Button(action:{ print("liked") }){
                     Image(systemName: "heart.circle.fill")
@@ -81,8 +81,9 @@ struct DiscoverRow: View {
             .padding(.bottom, 8)
         }
         .background(Color.white)
-    }
-    
+        }
+    } // END OF view
+
 }
 
 struct DiscverRow_Previews: PreviewProvider {
