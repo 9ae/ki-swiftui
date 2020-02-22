@@ -40,20 +40,47 @@ struct DiscoverRow: View {
     }
     
     var body: some View {
-        ZStack(alignment: .trailing) {
-          picture().resizable().scaledToFill()
-            VStack(alignment: .leading, spacing: 8) {
-                Spacer()
-                Text(profile.name).padding(.horizontal, 16)
-                Spacer()
-                kinksCount(profile.kinksMatched)
-                    .padding(.horizontal, 16)
-                vouchCount(profile.vouches)
-                    .padding(.horizontal, 16)
-                    .padding(.bottom, 8)
+        ZStack(alignment: .bottomTrailing) {
+            VStack(alignment: .leading) {
+                picture().resizable()
+                HStack(alignment: .top, spacing: 16) {
+                    Text(profile.name)
+                        .padding(.horizontal, 16)
+                        .font(.headline)
+                    
+                    kinksCount(profile.kinksMatched)
+                        .font(.caption)
+                    
+                    vouchCount(profile.vouches)
+                        .padding(.bottom, 8)
+                        .font(.caption)
+                }
+                .frame(width: nil, height: 64, alignment: .center)
+                .background(Color(hue: 0, saturation: 0, brightness: 1.0, opacity: 0.8))
             }
-            .background(Color.purple)
+            VStack(alignment: .center, spacing: 24) {
+                Button(action:{ print("liked") }){
+                    Image(systemName: "heart.circle.fill")
+                        .resizable()
+                        .frame(width: 36, height: 36, alignment: .center)
+                        .foregroundColor(Color.pink)
+                        .background(Color.white)
+                        .cornerRadius(18)
+                        .shadow(color: Color.gray, radius: 2, x: -1, y: 1)
+                }
+                Button(action:{ print("skip") }){
+                   Image(systemName: "arrowshape.turn.up.right.circle.fill")
+                       .resizable()
+                       .frame(width: 24, height: 24, alignment: .center)
+                    .foregroundColor(Color.gray)
+                       .background(Color.white)
+                       .cornerRadius(12)
+                }
+            }
+            .padding(.trailing, 8)
+            .padding(.bottom, 8)
         }
+        .background(Color.white)
     }
     
 }

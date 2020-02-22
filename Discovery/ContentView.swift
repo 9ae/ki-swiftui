@@ -10,19 +10,22 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var profiles : [Profile]
     
     var body: some View {
-        VStack {
-            Button(action: {print("load preferences")}){
-                Text("Preferences")
+        NavigationView{
+            List(profiles, id: \.uuid){ pro in
+                DiscoverRow(profile: pro)
+                    .frame(width: 375, height: 230, alignment: .top)
+                .cornerRadius(16)
+                    .shadow(color: Color.gray, radius: 7, x: 1, y: 2)
             }
-            
         }
-    }
-}
+    } // END OF BODY
+} // END OF VIEW
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(profiles: mockDiscoverProfiles)
     }
 }
