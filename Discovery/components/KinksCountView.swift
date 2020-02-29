@@ -15,6 +15,7 @@ struct KinksCountView: View {
         return Text("\(count) \(noun)\n matched")
             .font(.caption)
             .foregroundColor(Color.black)
+            .lineLimit(2)
         
     }
 }

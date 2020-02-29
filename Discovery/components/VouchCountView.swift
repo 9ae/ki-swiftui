@@ -13,7 +13,8 @@ struct VouchCountView: View {
     var body: some View {
         let noun = "\(count > 1 ? "members" : "member")"
         return Text("vouched by\n\(count) \(noun)").font(.caption)
-        .foregroundColor(Color.black)
+            .foregroundColor(Color.black)
+            .lineLimit(2)
     }
 }
 

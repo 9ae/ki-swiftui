@@ -21,6 +21,7 @@
 		0014F1BE2401DCD400208264 /* VouchCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1BD2401DCD400208264 /* VouchCountView.swift */; };
 		0014F1C02401E07200208264 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1BF2401E07200208264 /* HeartButton.swift */; };
 		0014F1C22401E1AD00208264 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1C12401E1AD00208264 /* NextButton.swift */; };
+		00C6AB4B240AEAC0003D5B52 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6AB4A240AEAC0003D5B52 /* TagList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		0014F1BD2401DCD400208264 /* VouchCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VouchCountView.swift; sourceTree = "<group>"; };
 		0014F1BF2401E07200208264 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		0014F1C12401E1AD00208264 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		00C6AB4A240AEAC0003D5B52 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				0014F1BD2401DCD400208264 /* VouchCountView.swift */,
 				0014F1BF2401E07200208264 /* HeartButton.swift */,
 				0014F1C12401E1AD00208264 /* NextButton.swift */,
+				00C6AB4A240AEAC0003D5B52 /* TagList.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00C6AB4B240AEAC0003D5B52 /* TagList.swift in Sources */,
 				0014F1C02401E07200208264 /* HeartButton.swift in Sources */,
 				0014F1B324019EC900208264 /* schema.swift in Sources */,
 				0014F19C24019E5900208264 /* AppDelegate.swift in Sources */,
