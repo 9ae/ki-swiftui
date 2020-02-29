@@ -12,6 +12,7 @@ struct ProfileView: View {
     var profile : Profile
     
     func picture() -> Image {
+        
         if let pic_id = profile.picture_public_id {
             let url = URL(string: "https://res.cloudinary.com/i99/image/upload/c_thumb,g_face,h_460,w_750/\(pic_id)")
             do {
@@ -38,8 +39,8 @@ struct ProfileView: View {
             return AnyView(VStack(alignment: .leading) {
                 ForEach(prompts, id: \.title) { q in
                     VStack(alignment: .leading) {
-                        Text(q.title).font(.caption)
-                        Text(q.answer!).font(.body)
+                        Text(q.title).font(.caption).foregroundColor(Color.myText)
+                        Text(q.answer!).font(.body).foregroundColor(Color.myText)
                     }.padding(.vertical, 8)
                     } //end of ForeEach
                 }) // end of VStack
@@ -54,8 +55,8 @@ struct ProfileView: View {
                     picture().resizable().frame(width: nil, height: 400, alignment: .center)
                     
                     VStack(alignment: .leading, spacing: 8) {
-                        Text(profile.name).font(.title)
-                        Text("\(profile.age) years old, living in \(profile.city!)")
+                        Text(profile.name).font(.title).foregroundColor(Color.myTitle)
+                        Text("\(profile.age) years old, living in \(profile.city!)").foregroundColor(Color.myText)
                             .font(.body)
                         HStack(alignment: .top, spacing: 16) {
                             KinksCountView(count: profile.kinksMatched).fixedSize(horizontal: false, vertical: true)
@@ -66,17 +67,17 @@ struct ProfileView: View {
                         }
                     }.padding(.horizontal, 16)
                     
-                    bioText()?.padding(16).font(.body).lineLimit(nil)
+                    bioText()?.padding(16).font(.body).lineLimit(nil).foregroundColor(Color.myText)
                     
                     VStack(alignment: .leading, spacing: 4){
-                        Text("My gender(s) are:").font(.subheadline)
-                        TagList(labels: profile.genders, bgColor: Color.green, textColor: Color.white).padding(.leading, -8)
-                            .padding(.bottom, 16)
-                        Text("Role(s) I play are:").font(.subheadline)
-                        TagList(labels: profile.roles, bgColor: Color.orange, textColor: Color.white).padding(.leading, -8)
+                        Text("My gender(s) are:").font(.subheadline).foregroundColor(Color.myText)
+                        TagList(labels: profile.genders, bgColor: Color.myFadePrimary, textColor: Color.white).padding(.leading, -8)
+                        Spacer()
+                        Text("Role(s) I play are:").font(.subheadline).foregroundColor(Color.myText).padding(.top, 16)
+                        TagList(labels: profile.roles, bgColor: Color.myFadePrimary, textColor: Color.white).padding(.leading, -8)
                     }.padding(.horizontal, 16)
                     
-                    bioPrompts()?.padding(.horizontal, 16).font(.body)
+                    bioPrompts()?.padding(.horizontal, 16).padding(.top, 24)
                     
                     // To give additional space between content and buttons
                     Rectangle().frame(minWidth: 10, idealWidth: nil, maxWidth: nil, minHeight: 50, idealHeight: nil, maxHeight: nil, alignment: .center)

@@ -16,7 +16,7 @@ struct HeartButton: View {
             Image(systemName: "heart.circle.fill")
                 .resizable()
                 .frame(width: size, height: size, alignment: .center)
-                .foregroundColor(Color.pink)
+                .foregroundColor(Color.myAction)
                 .background(Color.white)
                 .cornerRadius(size * 0.5 )
         }

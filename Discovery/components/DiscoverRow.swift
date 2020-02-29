@@ -41,7 +41,7 @@ struct DiscoverRow: View {
                 Text(self.profile.name)
                     .padding(.horizontal, 16)
                     .font(.headline)
-                    .foregroundColor(Color.purple)
+                    .foregroundColor(Color.myText)
                 
                 KinksCountView(count: self.profile.kinksMatched)
                 

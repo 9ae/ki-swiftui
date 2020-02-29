@@ -16,7 +16,7 @@ struct NextButton: View {
             Image(systemName: "arrowshape.turn.up.right.circle.fill")
                 .resizable()
                 .frame(width: size, height: size, alignment: .center)
-                .foregroundColor(Color.gray)
+                .foregroundColor(Color.myFadePrimary)
                 .background(Color.white)
                 .cornerRadius(size * 0.5 )
         }
