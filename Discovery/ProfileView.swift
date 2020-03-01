@@ -52,6 +52,18 @@ struct ProfileView: View {
         else { return nil }
     }
     
+    func myKinks () -> AnyView? {
+        if profile.kinks.count > 0 {
+            let kinks = profile.kinks.map { k in
+                return k.label
+            }
+            return AnyView(VStack(alignment: .leading, spacing: 4){
+                Text("I'm into...").font(.subheadline).foregroundColor(Color.myText)
+                TagList(labels: kinks, bgColor: Color.myPrimary, textColor: Color.white).padding(.leading, -8)
+            })
+        } else { return nil }
+    }
+    
     func returnToList(){
         dm.markProfile(self.profile.uuid)
         self.presentation.wrappedValue.dismiss()
@@ -85,6 +97,8 @@ struct ProfileView: View {
                         Text("Role(s) I play are:").font(.subheadline).foregroundColor(Color.myText).padding(.top, 16)
                         TagList(labels: profile.roles, bgColor: Color.myFadePrimary, textColor: Color.white).padding(.leading, -8)
                     }.padding(.horizontal, 16)
+                    
+                    myKinks().padding(.horizontal, 16).padding(.top, 24)
                     
                     bioPrompts()?.padding(.horizontal, 16).padding(.top, 24)
                     

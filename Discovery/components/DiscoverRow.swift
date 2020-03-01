@@ -41,7 +41,7 @@ struct DiscoverRow: View {
                 Text(self.profile.name)
                     .padding(.horizontal, 16)
                     .font(.headline)
-                    .foregroundColor(Color.myText)
+                    .foregroundColor(Color.myBG)
                 
                 KinksCountView(count: self.profile.kinksMatched)
                 
@@ -49,7 +49,7 @@ struct DiscoverRow: View {
             }
             .frame(width: geometry.size.width , height: 64, alignment: .leading)
             .fixedSize(horizontal: false, vertical: true)
-            .background(Color(hue: 0, saturation: 0, brightness: 1.0, opacity: 0.8))
+            .background(Color(hue: 0, saturation: 0, brightness: 0.1, opacity: 0.8))
             VStack(alignment: .center, spacing: 24) {
                 HeartButton(size: 36){print("liked")}
                     .shadow(color: Color.gray, radius: 2, x: -1, y: 1)

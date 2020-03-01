@@ -14,7 +14,7 @@ struct KinksCountView: View {
         let noun = count > 1 ? "kinks" : "kink"
         return Text("\(count) \(noun)\n matched")
             .font(.caption)
-            .foregroundColor(Color.myText)
+            .foregroundColor(Color.myPrimary)
             .lineLimit(2)
         
     }
