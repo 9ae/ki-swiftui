@@ -25,6 +25,7 @@
 		00476173240B42980052735B /* InteractiveTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00476172240B42980052735B /* InteractiveTags.swift */; };
 		00C6AB4B240AEAC0003D5B52 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6AB4A240AEAC0003D5B52 /* TagList.swift */; };
 		00C6AB4D240AFD93003D5B52 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6AB4C240AFD93003D5B52 /* Theme.swift */; };
+		00E186FD240B90D3005E2812 /* DailyMatches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00E186FC240B90D3005E2812 /* DailyMatches.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		00476172240B42980052735B /* InteractiveTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveTags.swift; sourceTree = "<group>"; };
 		00C6AB4A240AEAC0003D5B52 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		00C6AB4C240AFD93003D5B52 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		00E186FC240B90D3005E2812 /* DailyMatches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMatches.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				0014F1C12401E1AD00208264 /* NextButton.swift */,
 				00C6AB4A240AEAC0003D5B52 /* TagList.swift */,
 				00476172240B42980052735B /* InteractiveTags.swift */,
+				00E186FC240B90D3005E2812 /* DailyMatches.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				0014F1B324019EC900208264 /* schema.swift in Sources */,
 				0014F19C24019E5900208264 /* AppDelegate.swift in Sources */,
 				00C6AB4D240AFD93003D5B52 /* Theme.swift in Sources */,
+				00E186FD240B90D3005E2812 /* DailyMatches.swift in Sources */,
 				0014F19E24019E5900208264 /* SceneDelegate.swift in Sources */,
 				0014F1BC2401DBEB00208264 /* KinksCountView.swift in Sources */,
 				0014F1B72401A0A100208264 /* DiscoverRow.swift in Sources */,

@@ -414,6 +414,8 @@ class DM : ObservableObject {
     
     @Published var preferences : DiscoveryPreferences = DiscoveryPreferences()
     
+    @Published var dailyMatches : [Profile] = []
+    
     func markProfile(_ uuid: String) -> Void {
         self.discoverProfiles = self.discoverProfiles.filter({ pro in
             pro.uuid != uuid

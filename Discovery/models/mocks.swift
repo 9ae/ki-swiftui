@@ -43,6 +43,7 @@ func mockDM () -> DM {
     dm.discoverProfiles = mockDiscoverProfiles
     dm.preferences.genders = ["agender"]
     dm.preferences.roles = ["domme","bunny"]
+    dm.dailyMatches = [mockDiscoverProfiles[0]]
     return dm
 }
 
