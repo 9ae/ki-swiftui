@@ -21,6 +21,8 @@
 		0014F1BE2401DCD400208264 /* VouchCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1BD2401DCD400208264 /* VouchCountView.swift */; };
 		0014F1C02401E07200208264 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1BF2401E07200208264 /* HeartButton.swift */; };
 		0014F1C22401E1AD00208264 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0014F1C12401E1AD00208264 /* NextButton.swift */; };
+		00476171240B383E0052735B /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00476170240B383E0052735B /* PreferencesView.swift */; };
+		00476173240B42980052735B /* InteractiveTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00476172240B42980052735B /* InteractiveTags.swift */; };
 		00C6AB4B240AEAC0003D5B52 /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6AB4A240AEAC0003D5B52 /* TagList.swift */; };
 		00C6AB4D240AFD93003D5B52 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C6AB4C240AFD93003D5B52 /* Theme.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,8 @@
 		0014F1BD2401DCD400208264 /* VouchCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VouchCountView.swift; sourceTree = "<group>"; };
 		0014F1BF2401E07200208264 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		0014F1C12401E1AD00208264 /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		00476170240B383E0052735B /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
+		00476172240B42980052735B /* InteractiveTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveTags.swift; sourceTree = "<group>"; };
 		00C6AB4A240AEAC0003D5B52 /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		00C6AB4C240AFD93003D5B52 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +91,7 @@
 				0014F1A924019E5A00208264 /* Info.plist */,
 				0014F1A324019E5A00208264 /* Preview Content */,
 				00C6AB4C240AFD93003D5B52 /* Theme.swift */,
+				00476170240B383E0052735B /* PreferencesView.swift */,
 			);
 			path = Discovery;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				0014F1BF2401E07200208264 /* HeartButton.swift */,
 				0014F1C12401E1AD00208264 /* NextButton.swift */,
 				00C6AB4A240AEAC0003D5B52 /* TagList.swift */,
+				00476172240B42980052735B /* InteractiveTags.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -202,9 +208,11 @@
 				0014F1B72401A0A100208264 /* DiscoverRow.swift in Sources */,
 				0014F1C22401E1AD00208264 /* NextButton.swift in Sources */,
 				0014F1BE2401DCD400208264 /* VouchCountView.swift in Sources */,
+				00476173240B42980052735B /* InteractiveTags.swift in Sources */,
 				0014F1A024019E5900208264 /* ContentView.swift in Sources */,
 				0014F1B92401DB1500208264 /* ProfileView.swift in Sources */,
 				0014F1B524019F3200208264 /* mocks.swift in Sources */,
+				00476171240B383E0052735B /* PreferencesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

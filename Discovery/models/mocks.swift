@@ -36,3 +36,13 @@ let mockDiscoverProfiles : [Profile] = [
     genPro(name: "Test Kenzi", age: 29, picture: "95f2176b-5369-42b3-9bab-bc6494361c76", vouches: 0, kinksMatched: 4),
     genPro(name: "Test Demo 2", age: 32, picture: "f2e2f199-3a7c-4392-82a1-dcc796c74bb9", vouches: 8, kinksMatched: 1),
 ]
+
+
+func mockDM () -> DM {
+    let dm = DM()
+    dm.discoverProfiles = mockDiscoverProfiles
+    dm.preferences.genders = ["agender"]
+    dm.preferences.roles = ["domme","bunny"]
+    return dm
+}
+

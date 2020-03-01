@@ -10,17 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var profiles : [Profile]
+   // var profiles : [Profile]
+    @EnvironmentObject var dm : DM
     
-    
-    init(profiles: [Profile]){
+    init(){
         UITableView.appearance().separatorStyle = .none
-        self.profiles = profiles
+     //   self.profiles = profiles
     }
     
     var body: some View {
         NavigationView{
-            List(profiles, id: \.uuid){ pro in
+            List(dm.discoverProfiles, id: \.uuid){ pro in
                 NavigationLink(destination: ProfileView(profile: pro) ){
                     DiscoverRow(profile: pro)
                         .frame(width: nil, height: 230, alignment: .top)
@@ -28,12 +28,18 @@ struct ContentView: View {
                         .shadow(color: Color.gray, radius: 7, x: 1, y: 2)
                 }
             } // end of list
-        }.background(Color.white) // end of nav view
+                .navigationBarItems(trailing:
+                    NavigationLink(destination: PreferencesView(), label: {
+                        Image(systemName: "slider.horizontal.3").foregroundColor(Color("primaryColor"))
+                    })
+                        .padding(.trailing, 16)
+                )
+        }.background(Color.myBG) // end of nav view
     } // END OF BODY
 } // END OF VIEW
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(profiles: mockDiscoverProfiles)
+        ContentView().environmentObject(mockDM())
     }
 }

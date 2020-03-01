@@ -21,7 +21,6 @@ struct TagList: View {
     }
     
     func item(for text: String) -> some View {
-        
         Text(text)
             .padding(5)
             .font(.caption)

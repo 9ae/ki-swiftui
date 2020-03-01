@@ -395,5 +395,28 @@ class Profile  : Codable {
         }
     }
     
+}
+
+class DiscoveryPreferences : ObservableObject {
+    @Published var minAge : String = ""
+    @Published var maxAge : String = ""
     
+    @Published var genders : [String] = []
+    @Published var roles : [String] = []
+}
+
+// This it the global model manager
+class DM : ObservableObject {
+    @Published var genders: [String] = ["agender","hijra","alien"]
+    @Published var roles: [String] = ["domme","sub","voyuer","bunny"]
+    
+    @Published var discoverProfiles: [Profile] = []
+    
+    @Published var preferences : DiscoveryPreferences = DiscoveryPreferences()
+    
+    func markProfile(_ uuid: String) -> Void {
+        self.discoverProfiles = self.discoverProfiles.filter({ pro in
+            pro.uuid != uuid
+        })
+    }
 }

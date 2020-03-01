@@ -9,6 +9,10 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    @Environment (\.presentationMode) var presentation
+    @EnvironmentObject var dm : DM
+    
     var profile : Profile
     
     func picture() -> Image {
@@ -46,6 +50,11 @@ struct ProfileView: View {
                 }) // end of VStack
             }
         else { return nil }
+    }
+    
+    func returnToList(){
+        dm.markProfile(self.profile.uuid)
+        self.presentation.wrappedValue.dismiss()
     }
     
     var body: some View {
@@ -86,9 +95,13 @@ struct ProfileView: View {
                 } // end of content stack
             } //end of scroll view
             HStack(alignment: .center, spacing: 24) {
-                NextButton(size: 32){print("skip")}
+                NextButton(size: 32){
+                    print("skip")
+                    self.returnToList()
+                }
                 HeartButton(size: 48) {
                     print("like")
+                    self.returnToList()
                 }
             }.padding()
         }.background(Color.white)
@@ -97,6 +110,6 @@ struct ProfileView: View {
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView(profile: mockDiscoverProfiles[1])
+        ProfileView(profile: mockDiscoverProfiles[1]).environmentObject(mockDM())
     }
 }
